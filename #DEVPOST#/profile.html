@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>< DEVPOST > - home</title>
+
+	<link rel="stylesheet" href="assets/style/main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+
+<header class="navigation_main_container grid_header"> 
+	 
+    <a href="index.html"> 
+		<img src="assets/img/logo.png" class="web_logo">
+	</a>
+
+	<nav> 
+ 
+		<a class="web_nav_button" href="hackathons.html">Hackathons </a>
+		<a class="web_nav_button" href="#">Projects </a>
+		<a class="web_nav_button" href="#">Events </a>
+		<a class="web_nav_button" href="#">Jobs </a>
+
+		<svg class="hb" onclick="toggle_navigation()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+		  <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+		    <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
+		    <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
+		  </path>
+		  <rect width="10" height="10" stroke="none">
+		    <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+		  </rect>
+		  <rect width="10" height="10" stroke="none">
+		    <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+		    <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+		  </rect>
+		</svg>
+
+	</nav>
+
+	<nav class="nav_user_menu"> 
+
+		<a class="Achievements" href="#">
+            <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.412 16.3134L25.7057 20.2871C25.8001 20.4507 25.8534 20.6348 25.861 20.8235C25.8686 21.0122 25.8304 21.2 25.7495 21.3707C25.6686 21.5414 25.5476 21.6899 25.3967 21.8035C25.2458 21.9172 25.0696 21.9925 24.8832 22.0231L24.7514 22.0359L24.6207 22.0347L21.1989 21.8131L19.6787 24.8884C19.5962 25.0549 19.4751 25.1994 19.3255 25.3097C19.176 25.42 19.0022 25.493 18.8187 25.5227C18.6353 25.5524 18.4474 25.5378 18.2707 25.4802C18.0939 25.4227 17.9335 25.3238 17.8027 25.1918L17.707 25.0821L17.623 24.9538L15.327 20.9789C16.9433 20.8779 18.5143 20.4041 19.9169 19.5947C21.3196 18.7853 22.5158 17.6622 23.412 16.3134ZM14.0017 20.9789L11.708 24.9549C11.6151 25.116 11.485 25.2526 11.3287 25.3532C11.1723 25.4539 10.9941 25.5157 10.809 25.5337C10.6239 25.5516 10.4372 25.525 10.2644 25.4562C10.0917 25.3874 9.93782 25.2783 9.81571 25.1381L9.72704 25.0214L9.65238 24.8884L8.13104 21.8143L4.71154 22.0359C4.52318 22.048 4.33469 22.0143 4.16222 21.9376C3.98974 21.861 3.83842 21.7436 3.72121 21.5957C3.604 21.4478 3.52439 21.2736 3.48921 21.0882C3.45403 20.9027 3.46433 20.7115 3.51921 20.5309L3.56588 20.4061L3.62421 20.2894L5.92021 16.3123C6.81583 17.6611 8.01143 18.7843 9.41344 19.5941C10.8155 20.4039 12.3858 20.8771 14.0017 20.9789ZM14.6667 2.33325L14.9467 2.33792C17.0629 2.41052 19.0682 3.30224 20.5396 4.82499C22.011 6.34773 22.8334 8.38244 22.8334 10.4999L22.8299 10.7251L22.8217 10.9491L22.8007 11.2349L22.7704 11.5173L22.7424 11.7249C22.6656 12.2285 22.5418 12.7238 22.3725 13.2043L22.2372 13.5636L22.0587 13.9696C21.3982 15.3766 20.35 16.5659 19.0371 17.3979C17.7243 18.2299 16.2013 18.67 14.647 18.6666C13.0927 18.6632 11.5716 18.2163 10.2625 17.3785C8.95327 16.5407 7.91031 15.3468 7.25604 13.9369L7.10438 13.5904L7.04371 13.4353L6.95038 13.1821L6.83954 12.8391C6.79996 12.7063 6.76378 12.5724 6.73104 12.4378L6.66104 12.1216L6.60388 11.8054L6.58054 11.6433L6.53504 11.2664L6.50704 10.8406L6.50004 10.4999C6.50001 8.38244 7.32242 6.34773 8.7938 4.82499C10.2652 3.30224 12.2705 2.41052 14.3867 2.33792L14.6667 2.33325Z" fill="#CED4DA"/>
+                </svg>
+                
+
+			</svg>
+		</a>
+
+		<a class="Notifications" href="#">
+			<svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M21 22.5833V23.75H0V22.5833L2.33333 20.25V13.25C2.33333 9.63333 4.70167 6.44833 8.16667 5.42167V5.08333C8.16667 4.46449 8.4125 3.871 8.85008 3.43342C9.28767 2.99583 9.88116 2.75 10.5 2.75C11.1188 2.75 11.7123 2.99583 12.1499 3.43342C12.5875 3.871 12.8333 4.46449 12.8333 5.08333V5.42167C16.2983 6.44833 18.6667 9.63333 18.6667 13.25V20.25L21 22.5833ZM12.8333 24.9167C12.8333 25.5355 12.5875 26.129 12.1499 26.5666C11.7123 27.0042 11.1188 27.25 10.5 27.25C9.88116 27.25 9.28767 27.0042 8.85008 26.5666C8.4125 26.129 8.16667 25.5355 8.16667 24.9167" fill="#CED4DA"/>
+			<rect x="11" y="0.75" width="16" height="16" rx="8" fill="#F4801A"/>
+			<path d="M21.5928 9.15723V10.1729H16.4707L16.417 9.3916L19.4297 4.64062H20.46L19.3467 6.53027L17.7305 9.15723H21.5928ZM20.748 4.64062V11.75H19.4541V4.64062H20.748Z" fill="white"/>
+			</svg>
+		</a>
+
+
+		<a class="Messages" href="#">
+            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.6667 5.33341L12.3334 11.1667L3.00002 5.33341V3.00008L12.3334 8.83341L21.6667 3.00008M21.6667 0.666748H3.00002C1.70502 0.666748 0.666687 1.70508 0.666687 3.00008V17.0001C0.666687 17.6189 0.91252 18.2124 1.3501 18.65C1.78769 19.0876 2.38118 19.3334 3.00002 19.3334H21.6667C22.2855 19.3334 22.879 19.0876 23.3166 18.65C23.7542 18.2124 24 17.6189 24 17.0001V3.00008C24 2.38124 23.7542 1.78775 23.3166 1.35017C22.879 0.912581 22.2855 0.666748 21.6667 0.666748Z" fill="#CED4DA"/>
+            </svg>                
+		</a>
+
+
+		<a href="#userpanel"> 
+			<img src="assets/img/avatar.png">
+		</a>
+
+
+
+	</nav>
+
+	<div id="toggled_menu_container"> 
+
+		<nav> 
+			<a class="web_toggled_menu_buttons" href="hackathons.html">Hackathons </a>
+			<a class="web_toggled_menu_buttons" href="#">Projects </a>
+			<a class="web_toggled_menu_buttons" href="#">Events </a>
+			<a class="web_toggled_menu_buttons" href="#">Jobs </a>
+		</nav>
+
+	</div>
+
+
+</header>
+ 
+
+
+<main class="web_main_container_01"> 
+ 
+
+  <div class="web_user_info">
+
+    <div class="web_user_info_profile">
+        <img src="assets/img/avatar.png" alt="avatar" class="user_profile_image">
+        <div class="web_user_details">
+            <span class="user_name">JOHN DOE</span>
+            <span class="user_position">Frontend Developer</span>
+        </div>
+    </div>
+
+
+    <div class="web_user_status_container">
+
+        <div class="web_status_block"><span class="web_status_amount_block c_green"> <span class="web_user_status_amounts">12</span> PROJECTS </span></div>
+        <div class="web_status_block"><span class="web_status_amount_block c_yellow"> <span class="web_user_status_amounts">10</span> HACKATHONS </span></div>
+        <div class="web_status_block"><span class="web_status_amount_block c_cyan"> <span class="web_user_status_amounts">68</span> FOLLOWER </span></div>
+        <div class="web_status_block"><span class="web_status_amount_block c_purple"> <span class="web_user_status_amounts">24</span> FOLLOWING </span></div>
+        <div class="web_status_block"><span class="web_status_amount_block c_red"> <span class="web_user_status_amounts">16</span> LIKES </span></div>
+ 
+    </div>
+
+  </div>
+ 
+  <div class="web_profile_container">
+
+    <div class="web_profile_title_block">
+        <span>Rank</span>
+        <span>XP</span>
+    </div>
+
+    <div class="web_profile_panels_container">
+
+        <div class="web_profile___panel_box">
+
+            <div class="web_profile_panel__">
+                <div class="web_profile_panel_rank">
+                    <span>Your rank among all</span>
+                    <select name="" id="">
+                        <option value="#">participants</option>
+                    </select>
+                </div>
+                <div class="web_rank_amount">
+                    <span>746 th</span>
+                </div>
+            </div>
+
+			<div class="title_web_profile__panel">
+				Wallet
+			</div>
+			<div class="web_profile_panel__">
+				
+				<div class="total_money"><span class="total_money_title">Total Earnings <span class="total_money_amount"> 1200 $</span></span></div>
+				<div class="total_coin"><span class="total_coin_title">DevCoin <span class="total_coin_amount">20 DC</span></span></div>
+
+            </div> 
+
+        </div>
+
+        <div class="web_profile___panel_box">
+
+			<div class="web_profile_panel__">
+                <div class="web_profile_panel_level">
+					<div class="level_amount_start">5 LEVEL</div>
+					<div class="level_progress_bar_bncode">
+						<div class="level_progress">
+							<div class="level_progress_amount">3200</div>
+						</div>
+
+						<div class="exp_start">2400 XP</div>
+						<div class="exp_end">3200 XP</div>
+					</div>
+					<div class="level_amount_end">6 LEVEL</div>
+                </div>
+            </div>
+	 
+ 
+			<div class="web_profile_panel__">
+				
+				<div class="charts_box">
+					<canvas id="myChart" style="width:670px;height: 220px; padding: 25px;"></canvas>
+				</div>
+
+            </div> 
+
+ 
+        </div>
+
+    </div>
+
+			
+	<div class="achivements">
+		Achivements
+	</div>
+	<div class="achivements-list">
+		<div class="achivement-box">
+			<img src="assets/img/w_eclipse.png" alt="">
+			<span>Join your first hackathon</span>
+		</div>
+
+		<div class="achivement-box">
+			<img src="assets/img/t_eclipse.png" alt="">
+			<span>Join your first team</span>
+		</div>
+
+
+		<div class="achivement-box">
+			<img src="assets/img/1_eclipse.png" alt="">
+			<span>1 Hackathon Win</span>
+		</div>
+
+
+		
+		<div class="achivement-box no_achivement">
+			<img src="assets/img/1_eclipse.png" alt="">
+			<span>5 Hackathon Win</span>
+		</div>
+
+		
+		<div class="achivement-box no_achivement">
+			<img src="assets/img/1_eclipse.png" alt="">
+			<span>10 Hackathon Win</span>
+		</div>
+
+
+		<div class="achivement-box no_achivement">
+			<img src="assets/img/5_eclipse.png" alt="">
+			<span>Win a hackathon as a team</span>
+		</div>
+		 
+		<div class="achivement-box">
+			<img src="assets/img/year_eclipse.png" alt="">
+			<span>Complete 1 year in Devpost</span>
+		</div>
+		 
+		
+		<div class="achivement-box">
+			<img src="assets/img/post_eclipse.png" alt="">
+			<span>Write 1 blog post</span>
+		</div>
+		 
+		<div class="achivement-box">
+			<img src="assets/img/follow_eclipse.png" alt="">
+			<span>Follow at least 20 people</span>
+		</div>
+		 
+		<div class="achivement-box no_achivement">
+			<img src="assets/img/people_eclipse.png" alt="">
+			<span>Following by 20 people</span>
+		</div>	
+
+		<div class="achivement-box no_achivement">
+			<img src="assets/img/join_eclipse.png" alt="">
+			<span>Join 5 fintech-themed hackathons</span>
+		</div>	
+ 
+
+		<div class="achivement-box no_achivement">
+			<img src="assets/img/e_eclipse.png" alt="">
+			<span>Participate in 5 eco-themed hackathons</span>
+		</div>	
+	</div>
+
+
+
+  </div>
+
+</main>
+
+ 
+
+<div class="spacer"> </div>
+
+<footer class="web_footer_container"> 
+
+<div class="web_footer_content_block"> 
+	<img src="assets/img/logo.png">
+	<div class="soc_media_footer"> 
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M10.4839 15L15.6739 12L10.4839 9V15ZM22.0439 7.17C22.1739 7.64 22.2639 8.27 22.3239 9.07C22.3939 9.87 22.4239 10.56 22.4239 11.16L22.4839 12C22.4839 14.19 22.3239 15.8 22.0439 16.83C21.7939 17.73 21.2139 18.31 20.3139 18.56C19.8439 18.69 18.9839 18.78 17.6639 18.84C16.3639 18.91 15.1739 18.94 14.0739 18.94L12.4839 19C8.29389 19 5.68389 18.84 4.65389 18.56C3.75389 18.31 3.17389 17.73 2.92389 16.83C2.79389 16.36 2.70389 15.73 2.64389 14.93C2.57389 14.13 2.54389 13.44 2.54389 12.84L2.48389 12C2.48389 9.81 2.64389 8.2 2.92389 7.17C3.17389 6.27 3.75389 5.69 4.65389 5.44C5.12389 5.31 5.98389 5.22 7.30389 5.16C8.60389 5.09 9.79389 5.06 10.8939 5.06L12.4839 5C16.6739 5 19.2839 5.16 20.3139 5.44C21.2139 5.69 21.7939 6.27 22.0439 7.17Z" fill="#CED4DA"/>
+		</svg>
+	</a>
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M22.9439 6C22.1739 6.35 21.3439 6.58 20.4839 6.69C21.3639 6.16 22.0439 5.32 22.3639 4.31C21.5339 4.81 20.6139 5.16 19.6439 5.36C18.8539 4.5 17.7439 4 16.4839 4C14.1339 4 12.2139 5.92 12.2139 8.29C12.2139 8.63 12.2539 8.96 12.3239 9.27C8.76393 9.09 5.59393 7.38 3.48393 4.79C3.11393 5.42 2.90393 6.16 2.90393 6.94C2.90393 8.43 3.65393 9.75 4.81393 10.5C4.10393 10.5 3.44393 10.3 2.86393 10V10.03C2.86393 12.11 4.34393 13.85 6.30393 14.24C5.67465 14.4122 5.01402 14.4362 4.37393 14.31C4.64553 15.1625 5.17746 15.9084 5.89494 16.4429C6.61242 16.9775 7.47937 17.2737 8.37393 17.29C6.85756 18.4904 4.97792 19.1393 3.04393 19.13C2.70393 19.13 2.36393 19.11 2.02393 19.07C3.92393 20.29 6.18393 21 8.60393 21C16.4839 21 20.8139 14.46 20.8139 8.79C20.8139 8.6 20.8139 8.42 20.8039 8.23C21.6439 7.63 22.3639 6.87 22.9439 6Z" fill="#CED4DA"/>
+		</svg>
+
+	</a>
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M19.4839 3C20.0143 3 20.523 3.21071 20.8981 3.58579C21.2732 3.96086 21.4839 4.46957 21.4839 5V19C21.4839 19.5304 21.2732 20.0391 20.8981 20.4142C20.523 20.7893 20.0143 21 19.4839 21H5.48389C4.95345 21 4.44475 20.7893 4.06967 20.4142C3.6946 20.0391 3.48389 19.5304 3.48389 19V5C3.48389 4.46957 3.6946 3.96086 4.06967 3.58579C4.44475 3.21071 4.95345 3 5.48389 3H19.4839ZM18.9839 18.5V13.2C18.9839 12.3354 18.6404 11.5062 18.0291 10.8948C17.4177 10.2835 16.5885 9.94 15.7239 9.94C14.8739 9.94 13.8839 10.46 13.4039 11.24V10.13H10.6139V18.5H13.4039V13.57C13.4039 12.8 14.0239 12.17 14.7939 12.17C15.1652 12.17 15.5213 12.3175 15.7838 12.5801C16.0464 12.8426 16.1939 13.1987 16.1939 13.57V18.5H18.9839ZM7.36389 8.56C7.80945 8.56 8.23677 8.383 8.55183 8.06794C8.86689 7.75288 9.04389 7.32556 9.04389 6.88C9.04389 5.95 8.29389 5.19 7.36389 5.19C6.91567 5.19 6.48581 5.36805 6.16888 5.68499C5.85194 6.00193 5.67389 6.43178 5.67389 6.88C5.67389 7.81 6.43389 8.56 7.36389 8.56ZM8.75389 18.5V10.13H5.98389V18.5H8.75389Z" fill="#CED4DA"/>
+		</svg>
+
+	</a>
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M22.4839 12C22.4839 6.48 18.0039 2 12.4839 2C6.96389 2 2.48389 6.48 2.48389 12C2.48389 16.84 5.92389 20.87 10.4839 21.8V15H8.48389V12H10.4839V9.5C10.4839 7.57 12.0539 6 13.9839 6H16.4839V9H14.4839C13.9339 9 13.4839 9.45 13.4839 10V12H16.4839V15H13.4839V21.95C18.5339 21.45 22.4839 17.19 22.4839 12Z" fill="#CED4DA"/>
+		</svg>
+
+	</a>
+
+
+	</div>
+ 
+</div>
+
+<div class="list_navigation_at_footer"> 
+
+	<div class="list_nav_footer"> 
+		<label>COMPANY</label>
+		<a href="#">ABOUT</a>
+		<a href="#">CAREERS</a>
+		<a href="#">PRESS</a>
+		<a href="#">CONTACT</a>
+	</div>
+
+	<div class="list_nav_footer"> 
+		<label>DEVELOPERS</label>
+		<a href="#">DEVCITY</a>
+		<a href="#">LEADERBOARD</a>
+		<a href="#">TEAMS</a>
+		<a href="#">EVENTS</a>
+		<a href="#">BLOG</a>
+		<a href="#">AVAILABLE JOBS</a>
+		<a href="#">MARKETPLACE</a>
+	</div>
+
+	 
+	<div class="list_nav_footer"> 
+		<label>PROFESSIONALS</label>
+		<a href="#">HACKATHONS</a>
+		<a href="#">TALENTS</a>
+		<a href="#">MARKETING</a>
+		<a href="#">SALES</a>
+		<a href="#">LEARNING</a>
+	</div>
+
+	<div class="list_nav_footer"> 
+		<label>OTHERS</label>
+		<a href="#">Community guidelines</a>
+	 	<a href="#">SECURITY</a>
+		<a href="#">CA NOTICE</a>
+		<a href="#">PRIVACY POLICY</a>
+		<a href="#">TERMS OF SERVICE</a>
+	</div>
+	 
+</div>
+
+</footer>
+</main>
+
+ 
+<script src="assets/script/charts.js"></script>
+<script src="assets/script/navigation__at_header.js"></script>
+</body>
+</html>

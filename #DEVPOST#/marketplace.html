@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>< DEVPOST > - Hackathons</title>
+
+	<link rel="stylesheet" href="assets/style/main.css">
+
+</head>
+<body>
+
+
+    <header class="navigation_main_container grid_header"> 
+	 
+        <a href="index.html"> 
+            <img src="assets/img/logo.png" class="web_logo">
+        </a>
+    
+        <nav> 
+     
+            <a class="web_nav_button" href="hackathons.html">Hackathons </a>
+            <a class="web_nav_button" href="#">Projects </a>
+            <a class="web_nav_button" href="#">Events </a>
+            <a class="web_nav_button" href="#">Jobs </a>
+    
+            <svg class="hb" onclick="toggle_navigation()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+              <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
+                <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
+              </path>
+              <rect width="10" height="10" stroke="none">
+                <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+              </rect>
+              <rect width="10" height="10" stroke="none">
+                <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+                <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+              </rect>
+            </svg>
+    
+        </nav>
+    
+        <nav class="nav_user_menu"> 
+    
+            <a class="Achievements" href="#">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.7453 17.8134L25.039 21.7871C25.1333 21.9507 25.1866 22.1348 25.1943 22.3235C25.2019 22.5122 25.1636 22.7 25.0828 22.8707C25.0019 23.0414 24.8808 23.1899 24.7299 23.3035C24.579 23.4172 24.4029 23.4925 24.2165 23.5231L24.0846 23.5359L23.954 23.5347L20.5321 23.3131L19.012 26.3884C18.9294 26.5549 18.8083 26.6994 18.6588 26.8097C18.5092 26.92 18.3355 26.993 18.152 27.0227C17.9685 27.0524 17.7806 27.0378 17.6039 26.9802C17.4272 26.9227 17.2668 26.8238 17.136 26.6918L17.0403 26.5821L16.9563 26.4538L14.6603 22.4789C16.2766 22.3779 17.8475 21.9041 19.2502 21.0947C20.6528 20.2853 21.8491 19.1622 22.7453 17.8134ZM13.335 22.4789L11.0413 26.4549C10.9484 26.616 10.8183 26.7526 10.6619 26.8532C10.5055 26.9539 10.3274 27.0157 10.1423 27.0337C9.95718 27.0516 9.77047 27.025 9.59769 26.9562C9.42492 26.8874 9.27107 26.7783 9.14896 26.6381L9.06029 26.5214L8.98563 26.3884L7.46429 23.3143L4.0448 23.5359C3.85644 23.548 3.66795 23.5143 3.49547 23.4376C3.32299 23.361 3.17167 23.2436 3.05446 23.0957C2.93725 22.9478 2.85765 22.7736 2.82247 22.5882C2.78729 22.4027 2.79758 22.2115 2.85246 22.0309L2.89913 21.9061L2.95746 21.7894L5.25346 17.8123C6.14908 19.1611 7.34468 20.2843 8.74669 21.0941C10.1487 21.9039 11.7191 22.3771 13.335 22.4789ZM14 3.83325L14.28 3.83792C16.3962 3.91052 18.4015 4.80224 19.8729 6.32499C21.3443 7.84773 22.1667 9.88244 22.1666 11.9999L22.1631 12.2251L22.155 12.4491L22.134 12.7349L22.1036 13.0173L22.0756 13.2249C21.9989 13.7285 21.875 14.2238 21.7058 14.7043L21.5705 15.0636L21.392 15.4696C20.7315 16.8766 19.6833 18.0659 18.3704 18.8979C17.0575 19.7299 15.5345 20.17 13.9802 20.1666C12.4259 20.1632 10.9049 19.7163 9.5957 18.8785C8.28652 18.0407 7.24356 16.8468 6.58929 15.4369L6.43763 15.0904L6.37696 14.9353L6.28363 14.6821L6.1728 14.3391C6.13321 14.2063 6.09703 14.0724 6.0643 13.9378L5.9943 13.6216L5.93713 13.3054L5.91379 13.1433L5.8683 12.7664L5.8403 12.3406L5.8333 11.9999C5.83326 9.88244 6.65567 7.84773 8.12705 6.32499C9.59843 4.80224 11.6037 3.91052 13.72 3.83792L14 3.83325Z" fill="#CED4DA"/>
+                    <rect x="14" y="0.5" width="16" height="16" rx="8" fill="#E0282E"/>
+                    <path d="M22.9766 4.37109V11.5H21.6826V5.87988L19.9688 6.44629V5.40137L22.8301 4.37109H22.9766Z" fill="white"/>
+                    </svg>
+    
+                </svg>
+            </a>
+    
+            <a class="Notifications" href="#">
+                <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 22.5833V23.75H0V22.5833L2.33333 20.25V13.25C2.33333 9.63333 4.70167 6.44833 8.16667 5.42167V5.08333C8.16667 4.46449 8.4125 3.871 8.85008 3.43342C9.28767 2.99583 9.88116 2.75 10.5 2.75C11.1188 2.75 11.7123 2.99583 12.1499 3.43342C12.5875 3.871 12.8333 4.46449 12.8333 5.08333V5.42167C16.2983 6.44833 18.6667 9.63333 18.6667 13.25V20.25L21 22.5833ZM12.8333 24.9167C12.8333 25.5355 12.5875 26.129 12.1499 26.5666C11.7123 27.0042 11.1188 27.25 10.5 27.25C9.88116 27.25 9.28767 27.0042 8.85008 26.5666C8.4125 26.129 8.16667 25.5355 8.16667 24.9167" fill="#CED4DA"/>
+                <rect x="11" y="0.75" width="16" height="16" rx="8" fill="#F4801A"/>
+                <path d="M21.5928 9.15723V10.1729H16.4707L16.417 9.3916L19.4297 4.64062H20.46L19.3467 6.53027L17.7305 9.15723H21.5928ZM20.748 4.64062V11.75H19.4541V4.64062H20.748Z" fill="white"/>
+                </svg>
+            </a>
+    
+    
+            <a class="Messages" href="#">
+                <svg width="31" height="26" viewBox="0 0 31 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 11.3334L11.6667 17.1667L2.33333 11.3334V9.00008L11.6667 14.8334L21 9.00008M21 6.66675H2.33333C1.03833 6.66675 0 7.70508 0 9.00008V23.0001C0 23.6189 0.245833 24.2124 0.683417 24.65C1.121 25.0876 1.71449 25.3334 2.33333 25.3334H21C21.6188 25.3334 22.2123 25.0876 22.6499 24.65C23.0875 24.2124 23.3333 23.6189 23.3333 23.0001V9.00008C23.3333 8.38124 23.0875 7.78775 22.6499 7.35017C22.2123 6.91258 21.6188 6.66675 21 6.66675Z" fill="#CED4DA"/>
+                <rect x="15" y="0.666748" width="16" height="16" rx="8" fill="#00B96B"/>
+                <path d="M25.4707 10.6511V11.6667H20.6562V10.7976L22.9658 8.30249C23.2067 8.02905 23.3971 7.79142 23.5371 7.5896C23.6771 7.38778 23.7764 7.20549 23.835 7.04272C23.8968 6.87671 23.9277 6.71883 23.9277 6.56909C23.9277 6.35099 23.8887 6.16056 23.8105 5.9978C23.7324 5.83179 23.6185 5.70321 23.4688 5.61206C23.3223 5.52091 23.1416 5.47534 22.9268 5.47534C22.6891 5.47534 22.4857 5.53068 22.3164 5.64136C22.1504 5.74878 22.0234 5.89852 21.9355 6.09058C21.8509 6.28263 21.8086 6.50236 21.8086 6.74976H20.5146C20.5146 6.32983 20.6123 5.94735 20.8076 5.60229C21.0029 5.25399 21.2829 4.97567 21.6475 4.76733C22.012 4.559 22.445 4.45483 22.9463 4.45483C23.4346 4.45483 23.848 4.53621 24.1865 4.69897C24.5251 4.85848 24.7822 5.08634 24.958 5.38257C25.1338 5.67879 25.2217 6.03198 25.2217 6.44214C25.2217 6.67 25.1842 6.89461 25.1094 7.11597C25.0345 7.33732 24.9287 7.55705 24.792 7.77515C24.6585 7.98999 24.499 8.20809 24.3135 8.42944C24.1279 8.6508 23.9212 8.87703 23.6934 9.10815L22.3066 10.6511H25.4707Z" fill="white"/>
+                </svg>
+            </a>
+    
+    
+            <a href="#userpanel"> 
+                <img src="assets/img/avatar.png">
+            </a>
+    
+    
+    
+        </nav>
+    
+        <div id="toggled_menu_container"> 
+    
+            <nav> 
+                <a class="web_toggled_menu_buttons" href="hackathons.html">Hackathons </a>
+                <a class="web_toggled_menu_buttons" href="#">Projects </a>
+                <a class="web_toggled_menu_buttons" href="#">Events </a>
+                <a class="web_toggled_menu_buttons" href="#">Jobs </a>
+            </nav>
+    
+        </div>
+    
+    
+    </header>
+     
+<main class="web_main_container_01"> 
+
+ 
+
+
+<div class="web_marketPlace_container"> 
+
+	<div class="web_hackathons_blocks"> 
+
+	   <div class="web_hackathons_filter_block"> 
+
+	   	<div class="web_hackathons_filter_opt_block"> 
+
+            <div class="your_balance_box">
+                <span class="balance_text">Your balance <span class="balance_amount">20 DC</span></span>
+            </div>
+
+ 			<span> 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_114_1745)">
+                    <path d="M22.1067 12.7534L13.0533 3.70002C12.9328 3.58167 12.7901 3.48833 12.6333 3.4254C12.4766 3.36247 12.3089 3.33119 12.14 3.33336H10.7467L21.1667 13.6334L14.1467 20.7134C14.2662 20.8329 14.408 20.9277 14.5642 20.9924C14.7203 21.0571 14.8877 21.0904 15.0567 21.0904C15.2257 21.0904 15.393 21.0571 15.5492 20.9924C15.7053 20.9277 15.8472 20.8329 15.9667 20.7134L22.1067 14.5734C22.2262 14.4539 22.321 14.312 22.3857 14.1559C22.4504 13.9997 22.4837 13.8324 22.4837 13.6634C22.4837 13.4943 22.4504 13.327 22.3857 13.1708C22.321 13.0147 22.2262 12.8728 22.1067 12.7534Z" fill="#CED4DA"/>
+                    <path d="M18.52 12.7799L9.46666 3.71992C9.3478 3.59795 9.2058 3.50092 9.04897 3.43453C8.89214 3.36813 8.72363 3.3337 8.55333 3.33325H2.40666C2.06542 3.33325 1.73815 3.46881 1.49685 3.71011C1.25555 3.9514 1.12 4.27867 1.12 4.61992V10.7666C1.12046 10.9353 1.15427 11.1023 1.21948 11.2579C1.2847 11.4135 1.38003 11.5546 1.5 11.6733L10.56 20.7333C10.6795 20.8528 10.8213 20.9476 10.9775 21.0123C11.1336 21.077 11.301 21.1103 11.47 21.1103C11.639 21.1103 11.8064 21.077 11.9625 21.0123C12.1186 20.9476 12.2605 20.8528 12.38 20.7333L18.52 14.5933C18.7594 14.3522 18.8937 14.0263 18.8937 13.6866C18.8937 13.3469 18.7594 13.021 18.52 12.7799ZM4.44666 7.81325C4.21827 7.81325 3.99502 7.74543 3.80522 7.61841C3.61541 7.49138 3.46759 7.31086 3.3805 7.09973C3.2934 6.88859 3.27096 6.65636 3.316 6.43245C3.36105 6.20855 3.47155 6.00306 3.63352 5.84203C3.79548 5.681 4.00161 5.57169 4.22577 5.52794C4.44993 5.48419 4.68204 5.50799 4.89266 5.5963C5.10329 5.68462 5.28295 5.83348 5.40887 6.02402C5.5348 6.21456 5.60132 6.4382 5.59999 6.66658C5.59823 6.97131 5.47594 7.26296 5.25984 7.47781C5.04374 7.69266 4.75139 7.81326 4.44666 7.81325Z" fill="#CED4DA"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_114_1745">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+                Categories
+ 			</span>
+
+ 	 		<div class="web_hackathons_filter_inputs_block"> 
+			  <input type="checkbox" id="0_inputs_empty" name="0_inputs_empty">
+			  <label for="0_inputs_empty"> Accessories</label><br>
+
+			  <input type="checkbox" id="1_inputs_empty" name="1_inputs_empty">
+			  <label for="1_inputs_empty"> Cloud</label><br>
+
+              <input type="checkbox" id="2_inputs_empty" name="2_inputs_empty">
+			  <label for="2_inputs_empty"> Education</label><br>
+
+              <input type="checkbox" id="3_inputs_empty" name="3_inputs_empty">
+			  <label for="3_inputs_empty"> Electronics</label><br>
+
+              <input type="checkbox" id="4_inputs_empty" name="4_inputs_empty">
+			  <label for="4_inputs_empty"> Gift Cards</label><br>
+
+              <input type="checkbox" id="5_inputs_empty" name="5_inputs_empty">
+			  <label for="5_inputs_empty"> Media</label><br>
+
+              <input type="checkbox" id="6_inputs_empty" name="6_inputs_empty">
+			  <label for="6_inputs_empty"> Wearable</label><br>
+ 	 		</div>
+ 
+
+
+              <span> 
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_114_1168)">
+                <path d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96451 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.745 9.41566 20.7162 6.93859 18.8888 5.11118C17.0614 3.28378 14.5843 2.25496 12 2.25ZM13.125 16.5H12.75V17.25C12.75 17.4489 12.671 17.6397 12.5303 17.7803C12.3897 17.921 12.1989 18 12 18C11.8011 18 11.6103 17.921 11.4697 17.7803C11.329 17.6397 11.25 17.4489 11.25 17.25V16.5H9.75C9.55109 16.5 9.36033 16.421 9.21967 16.2803C9.07902 16.1397 9 15.9489 9 15.75C9 15.5511 9.07902 15.3603 9.21967 15.2197C9.36033 15.079 9.55109 15 9.75 15H13.125C13.4234 15 13.7095 14.8815 13.9205 14.6705C14.1315 14.4595 14.25 14.1734 14.25 13.875C14.25 13.5766 14.1315 13.2905 13.9205 13.0795C13.7095 12.8685 13.4234 12.75 13.125 12.75H10.875C10.1788 12.75 9.51113 12.4734 9.01885 11.9812C8.52657 11.4889 8.25 10.8212 8.25 10.125C8.25 9.42881 8.52657 8.76113 9.01885 8.26884C9.51113 7.77656 10.1788 7.5 10.875 7.5H11.25V6.75C11.25 6.55109 11.329 6.36032 11.4697 6.21967C11.6103 6.07902 11.8011 6 12 6C12.1989 6 12.3897 6.07902 12.5303 6.21967C12.671 6.36032 12.75 6.55109 12.75 6.75V7.5H14.25C14.4489 7.5 14.6397 7.57902 14.7803 7.71967C14.921 7.86032 15 8.05109 15 8.25C15 8.44891 14.921 8.63968 14.7803 8.78033C14.6397 8.92098 14.4489 9 14.25 9H10.875C10.5766 9 10.2905 9.11853 10.0795 9.3295C9.86853 9.54048 9.75 9.82663 9.75 10.125C9.75 10.4234 9.86853 10.7095 10.0795 10.9205C10.2905 11.1315 10.5766 11.25 10.875 11.25H13.125C13.8212 11.25 14.4889 11.5266 14.9812 12.0188C15.4734 12.5111 15.75 13.1788 15.75 13.875C15.75 14.5712 15.4734 15.2389 14.9812 15.7312C14.4889 16.2234 13.8212 16.5 13.125 16.5Z" fill="#CED4DA"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_114_1168">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+                Price (DC)
+ 			</span>
+
+             <div class="web_hackathons_filter_inputs_block"> 
+                
+                <div class="dc_min_max_block">
+                    <input type="text" name="" id="" placeholder="Min">
+                    <input type="text" name="" id="" placeholder="Max">
+                </div>
+
+                <button class="filter_submit_btn">Filter</button>
+            </div>
+	   	</div>
+	   	<br>
+	 
+ 
+ 
+	   </div>
+
+
+
+
+
+
+
+
+
+	   <div class="web_hackathons_search_result_block"> 
+
+		   	<div class="web_hackathons_search_result_filter_top_block"> 
+
+		   		<div class="search_block_and_search"> 
+		   			<form> 
+		   				<input type="search" placeholder="Search by hackathon title or keyword">
+		   				 
+		   				<button><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M10.3333 9.33332H9.80665L9.61998 9.15332C10.0366 8.66929 10.3411 8.09917 10.5117 7.48373C10.6823 6.86829 10.7147 6.22275 10.6067 5.59332C10.2933 3.73998 8.74665 2.25998 6.87998 2.03332C6.22373 1.95029 5.55718 2.0185 4.93133 2.23271C4.30549 2.44692 3.73695 2.80146 3.2692 3.2692C2.80146 3.73695 2.44692 4.30549 2.23271 4.93133C2.0185 5.55718 1.95029 6.22373 2.03332 6.87998C2.25998 8.74665 3.73998 10.2933 5.59332 10.6067C6.22275 10.7147 6.86829 10.6823 7.48373 10.5117C8.09917 10.3411 8.66929 10.0366 9.15332 9.61998L9.33332 9.80665V10.3333L12.1667 13.1667C12.44 13.44 12.8867 13.44 13.16 13.1667C13.4333 12.8933 13.4333 12.4467 13.16 12.1733L10.3333 9.33332ZM6.33332 9.33332C4.67332 9.33332 3.33332 7.99332 3.33332 6.33332C3.33332 4.67332 4.67332 3.33332 6.33332 3.33332C7.99332 3.33332 9.33332 4.67332 9.33332 6.33332C9.33332 7.99332 7.99332 9.33332 6.33332 9.33332Z" fill="#CED4DA"/>
+						</svg>Search</button>
+
+		   			</form>
+		   		</div>
+
+		   		<div class="web_result_search_top_right_block"> 
+		   			<select class="web_big_select"> 
+		   				<option values="0">Ascending reward amount</option>
+		   			</select>
+		   		</div>
+
+
+                <div class="Buskets">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.0029 34C19.4529 34 18.9819 33.804 18.5899 33.412C18.1979 33.02 18.0023 32.5493 18.0029 32C18.0029 31.45 18.1989 30.979 18.5909 30.587C18.9829 30.195 19.4536 29.9993 20.0029 30C20.5529 30 21.0239 30.196 21.4159 30.588C21.8079 30.98 22.0036 31.4507 22.0029 32C22.0029 32.55 21.8069 33.021 21.4149 33.413C21.0229 33.805 20.5523 34.0007 20.0029 34ZM30.0029 34C29.4529 34 28.9819 33.804 28.5899 33.412C28.1979 33.02 28.0023 32.5493 28.0029 32C28.0029 31.45 28.1989 30.979 28.5909 30.587C28.9829 30.195 29.4536 29.9993 30.0029 30C30.5529 30 31.0239 30.196 31.4159 30.588C31.8079 30.98 32.0036 31.4507 32.0029 32C32.0029 32.55 31.8069 33.021 31.4149 33.413C31.0229 33.805 30.5523 34.0007 30.0029 34ZM20.0029 29C19.2529 29 18.6863 28.6707 18.3029 28.012C17.9196 27.3533 17.9029 26.6993 18.2529 26.05L19.6029 23.6L16.0029 16H14.9779C14.6946 16 14.4613 15.904 14.2779 15.712C14.0946 15.52 14.0029 15.2827 14.0029 15C14.0029 14.7167 14.0989 14.479 14.2909 14.287C14.4829 14.095 14.7203 13.9993 15.0029 14H16.6279C16.8113 14 16.9863 14.05 17.1529 14.15C17.3196 14.25 17.4446 14.3917 17.5279 14.575L18.2029 16H32.9529C33.4029 16 33.7113 16.1667 33.8779 16.5C34.0446 16.8333 34.0363 17.1833 33.8529 17.55L30.3029 23.95C30.1196 24.2833 29.8779 24.5417 29.5779 24.725C29.2779 24.9083 28.9363 25 28.5529 25H21.1029L20.0029 27H31.0279C31.3113 27 31.5446 27.096 31.7279 27.288C31.9113 27.48 32.0029 27.7173 32.0029 28C32.0029 28.2833 31.9069 28.521 31.7149 28.713C31.5229 28.905 31.2856 29.0007 31.0029 29H20.0029Z" fill="#CED4DA"/>
+                    <rect x="24" y="6" width="16" height="16" rx="8" fill="#F4801A"/>
+                    <path d="M34.3633 12.835V14.0312C34.3633 14.5781 34.3079 15.0452 34.1973 15.4326C34.0866 15.82 33.9271 16.1374 33.7188 16.3848C33.5104 16.6289 33.2614 16.8096 32.9717 16.9268C32.682 17.0407 32.3597 17.0977 32.0049 17.0977C31.7217 17.0977 31.458 17.0618 31.2139 16.9902C30.9697 16.9154 30.75 16.8014 30.5547 16.6484C30.3626 16.4922 30.1966 16.2936 30.0566 16.0527C29.9199 15.8118 29.8141 15.5238 29.7393 15.1885C29.6676 14.8532 29.6318 14.4674 29.6318 14.0312V12.835C29.6318 12.2881 29.6872 11.8226 29.7979 11.4385C29.9118 11.0544 30.0729 10.7402 30.2812 10.4961C30.4896 10.252 30.7386 10.0745 31.0283 9.96387C31.318 9.84993 31.6403 9.79297 31.9951 9.79297C32.2816 9.79297 32.5452 9.82878 32.7861 9.90039C33.0303 9.97201 33.2484 10.0843 33.4404 10.2373C33.6357 10.387 33.8018 10.5824 33.9385 10.8232C34.0752 11.0609 34.1794 11.3473 34.251 11.6826C34.3258 12.0146 34.3633 12.3988 34.3633 12.835ZM33.0742 14.207V12.6543C33.0742 12.3809 33.0579 12.1432 33.0254 11.9414C32.9961 11.7363 32.9521 11.5622 32.8936 11.4189C32.835 11.2757 32.7617 11.1602 32.6738 11.0723C32.5859 10.9811 32.485 10.9144 32.3711 10.8721C32.2572 10.8298 32.1318 10.8086 31.9951 10.8086C31.8258 10.8086 31.6745 10.8428 31.541 10.9111C31.4076 10.9762 31.2952 11.0804 31.2041 11.2236C31.113 11.3669 31.043 11.5573 30.9941 11.7949C30.9486 12.0293 30.9258 12.3158 30.9258 12.6543V14.207C30.9258 14.4805 30.9404 14.7197 30.9697 14.9248C31.0023 15.1299 31.0479 15.3057 31.1064 15.4521C31.1683 15.5986 31.2415 15.7191 31.3262 15.8135C31.4141 15.9046 31.515 15.973 31.6289 16.0186C31.7428 16.0609 31.8682 16.082 32.0049 16.082C32.1774 16.082 32.3288 16.0479 32.459 15.9795C32.5924 15.9111 32.7048 15.8037 32.7959 15.6572C32.887 15.5075 32.9554 15.3138 33.001 15.0762C33.0498 14.8353 33.0742 14.5456 33.0742 14.207Z" fill="white"/>
+                    </svg>
+                </div>
+		   	</div>
+
+
+
+		   	<div class="result_container_by_marketplace"> 
+
+                <div class="market_product_box">
+                    <img src="assets/img/eatsleep.png">
+                    <div class="description_product">
+                        <h3 class="product_name">T-Shirt</h3>
+                        <span class="product_desc">Eat - Sleep - Code - Repeat</span>
+                        <span class="product_cost">10 DC</span>
+
+                        <div class="control_product_buttons">
+                            <button class="no_bg_btn_product">Add to Cart</button>
+                            <button class="bg_btn_product">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="market_product_box">
+                    <img src="assets/img/stem.png">
+                    <div class="description_product">
+                        <h3 class="product_name">T-Shirt</h3>
+                        <span class="product_desc">STEM</span>
+                        <span class="product_cost">10 DC</span>
+
+                        <div class="control_product_buttons">
+                            <button class="no_bg_btn_product">Add to Cart</button>
+                            <button class="bg_btn_product">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="market_product_box">
+                    <img src="assets/img/code.png">
+                    <div class="description_product">
+                        <h3 class="product_name">T-Shirt</h3>
+                        <span class="product_desc">I Convert Coffee Into Code</span>
+                        <span class="product_cost">10 DC</span>
+
+                        <div class="control_product_buttons">
+                            <button class="no_bg_btn_product">Add to Cart</button>
+                            <button class="bg_btn_product">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="market_product_box">
+                    <img src="assets/img/amazon_card.png">
+                    <div class="description_product">
+                        <h3 class="product_name">Amazon Gift Card</h3>
+                        <span class="product_desc">Gift Card</span>
+                        <span class="product_cost">50 DC</span>
+
+                        <div class="control_product_buttons">
+                            <button class="no_bg_btn_product">Add to Cart</button>
+                            <button class="bg_btn_product">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                 
+                <div class="market_product_box">
+                    <img src="assets/img/coffe_mug.png">
+                    <div class="description_product">
+                        <h3 class="product_name">Coffe Mug</h3>
+                        <span class="product_desc">STEM</span>
+                        <span class="product_cost">5 DC</span>
+
+                        <div class="control_product_buttons">
+                            <button class="no_bg_btn_product">Add to Cart</button>
+                            <button class="bg_btn_product">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                 
+                <div class="market_product_box">
+                    <img src="assets/img/udemy.png">
+                    <div class="description_product">
+                        <h3 class="product_name">Udemy Coupon</h3>
+                        <span class="product_desc">Udemy Discount Coupon</span>
+                        <span class="product_cost">5 DC</span>
+
+                        <div class="control_product_buttons">
+                            <button class="no_bg_btn_product">Add to Cart</button>
+                            <button class="bg_btn_product">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                 
+
+
+                                 
+                <div class="market_product_box">
+                    <img src="assets/img/a_ec2.png">
+                    <div class="description_product">
+                        <h3 class="product_name">Amazon EC2 Instance </h3>
+                        <span class="product_desc">1 Month Free Instance</span>
+                        <span class="product_cost">15 DC</span>
+
+                        <div class="control_product_buttons">
+                            <button class="no_bg_btn_product">Add to Cart</button>
+                            <button class="bg_btn_product">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                 
+
+                                                 
+                <div class="market_product_box">
+                    <img src="assets/img/stickers.png">
+                    <div class="description_product">
+                        <h3 class="product_name">Stickers</h3>
+                        <span class="product_desc">Pack of 100 Programming Stickers</span>
+                        <span class="product_cost">3 DC</span>
+
+                        <div class="control_product_buttons">
+                            <button class="no_bg_btn_product">Add to Cart</button>
+                            <button class="bg_btn_product">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="market_product_box">
+                    <img src="assets/img/dalle2.png">
+                    <div class="description_product">
+                        <h3 class="product_name">DALL-E 2 Credits</h3>
+                        <span class="product_desc">1000 Credits For DALL-E</span>
+                        <span class="product_cost">15 DC</span>
+
+                        <div class="control_product_buttons">
+                            <button class="no_bg_btn_product">Add to Cart</button>
+                            <button class="bg_btn_product">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                 
+		   	</div>
+
+	   </div>
+
+
+
+
+
+
+	</div>
+
+</div>
+
+ 
+
+<footer class="web_footer_container"> 
+
+<div class="web_footer_content_block"> 
+	<img src="assets/img/logo.png">
+	<div class="soc_media_footer"> 
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M10.4839 15L15.6739 12L10.4839 9V15ZM22.0439 7.17C22.1739 7.64 22.2639 8.27 22.3239 9.07C22.3939 9.87 22.4239 10.56 22.4239 11.16L22.4839 12C22.4839 14.19 22.3239 15.8 22.0439 16.83C21.7939 17.73 21.2139 18.31 20.3139 18.56C19.8439 18.69 18.9839 18.78 17.6639 18.84C16.3639 18.91 15.1739 18.94 14.0739 18.94L12.4839 19C8.29389 19 5.68389 18.84 4.65389 18.56C3.75389 18.31 3.17389 17.73 2.92389 16.83C2.79389 16.36 2.70389 15.73 2.64389 14.93C2.57389 14.13 2.54389 13.44 2.54389 12.84L2.48389 12C2.48389 9.81 2.64389 8.2 2.92389 7.17C3.17389 6.27 3.75389 5.69 4.65389 5.44C5.12389 5.31 5.98389 5.22 7.30389 5.16C8.60389 5.09 9.79389 5.06 10.8939 5.06L12.4839 5C16.6739 5 19.2839 5.16 20.3139 5.44C21.2139 5.69 21.7939 6.27 22.0439 7.17Z" fill="#CED4DA"/>
+		</svg>
+	</a>
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M22.9439 6C22.1739 6.35 21.3439 6.58 20.4839 6.69C21.3639 6.16 22.0439 5.32 22.3639 4.31C21.5339 4.81 20.6139 5.16 19.6439 5.36C18.8539 4.5 17.7439 4 16.4839 4C14.1339 4 12.2139 5.92 12.2139 8.29C12.2139 8.63 12.2539 8.96 12.3239 9.27C8.76393 9.09 5.59393 7.38 3.48393 4.79C3.11393 5.42 2.90393 6.16 2.90393 6.94C2.90393 8.43 3.65393 9.75 4.81393 10.5C4.10393 10.5 3.44393 10.3 2.86393 10V10.03C2.86393 12.11 4.34393 13.85 6.30393 14.24C5.67465 14.4122 5.01402 14.4362 4.37393 14.31C4.64553 15.1625 5.17746 15.9084 5.89494 16.4429C6.61242 16.9775 7.47937 17.2737 8.37393 17.29C6.85756 18.4904 4.97792 19.1393 3.04393 19.13C2.70393 19.13 2.36393 19.11 2.02393 19.07C3.92393 20.29 6.18393 21 8.60393 21C16.4839 21 20.8139 14.46 20.8139 8.79C20.8139 8.6 20.8139 8.42 20.8039 8.23C21.6439 7.63 22.3639 6.87 22.9439 6Z" fill="#CED4DA"/>
+		</svg>
+
+	</a>
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M19.4839 3C20.0143 3 20.523 3.21071 20.8981 3.58579C21.2732 3.96086 21.4839 4.46957 21.4839 5V19C21.4839 19.5304 21.2732 20.0391 20.8981 20.4142C20.523 20.7893 20.0143 21 19.4839 21H5.48389C4.95345 21 4.44475 20.7893 4.06967 20.4142C3.6946 20.0391 3.48389 19.5304 3.48389 19V5C3.48389 4.46957 3.6946 3.96086 4.06967 3.58579C4.44475 3.21071 4.95345 3 5.48389 3H19.4839ZM18.9839 18.5V13.2C18.9839 12.3354 18.6404 11.5062 18.0291 10.8948C17.4177 10.2835 16.5885 9.94 15.7239 9.94C14.8739 9.94 13.8839 10.46 13.4039 11.24V10.13H10.6139V18.5H13.4039V13.57C13.4039 12.8 14.0239 12.17 14.7939 12.17C15.1652 12.17 15.5213 12.3175 15.7838 12.5801C16.0464 12.8426 16.1939 13.1987 16.1939 13.57V18.5H18.9839ZM7.36389 8.56C7.80945 8.56 8.23677 8.383 8.55183 8.06794C8.86689 7.75288 9.04389 7.32556 9.04389 6.88C9.04389 5.95 8.29389 5.19 7.36389 5.19C6.91567 5.19 6.48581 5.36805 6.16888 5.68499C5.85194 6.00193 5.67389 6.43178 5.67389 6.88C5.67389 7.81 6.43389 8.56 7.36389 8.56ZM8.75389 18.5V10.13H5.98389V18.5H8.75389Z" fill="#CED4DA"/>
+		</svg>
+
+	</a>
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M22.4839 12C22.4839 6.48 18.0039 2 12.4839 2C6.96389 2 2.48389 6.48 2.48389 12C2.48389 16.84 5.92389 20.87 10.4839 21.8V15H8.48389V12H10.4839V9.5C10.4839 7.57 12.0539 6 13.9839 6H16.4839V9H14.4839C13.9339 9 13.4839 9.45 13.4839 10V12H16.4839V15H13.4839V21.95C18.5339 21.45 22.4839 17.19 22.4839 12Z" fill="#CED4DA"/>
+		</svg>
+
+	</a>
+
+
+	</div>
+ 
+</div>
+
+<div class="list_navigation_at_footer"> 
+
+	<div class="list_nav_footer"> 
+		<label>COMPANY</label>
+		<a href="#">ABOUT</a>
+		<a href="#">CAREERS</a>
+		<a href="#">PRESS</a>
+		<a href="#">CONTACT</a>
+	</div>
+
+	<div class="list_nav_footer"> 
+		<label>DEVELOPERS</label>
+		<a href="#">DEVCITY</a>
+		<a href="#">LEADERBOARD</a>
+		<a href="#">TEAMS</a>
+		<a href="#">EVENTS</a>
+		<a href="#">BLOG</a>
+		<a href="#">AVAILABLE JOBS</a>
+		<a href="#">MARKETPLACE</a>
+	</div>
+
+	 
+	<div class="list_nav_footer"> 
+		<label>PROFESSIONALS</label>
+		<a href="#">HACKATHONS</a>
+		<a href="#">TALENTS</a>
+		<a href="#">MARKETING</a>
+		<a href="#">SALES</a>
+		<a href="#">LEARNING</a>
+	</div>
+
+	<div class="list_nav_footer"> 
+		<label>OTHERS</label>
+		<a href="#">Community guidelines</a>
+	 	<a href="#">SECURITY</a>
+		<a href="#">CA NOTICE</a>
+		<a href="#">PRIVACY POLICY</a>
+		<a href="#">TERMS OF SERVICE</a>
+	</div>
+	 
+</div>
+
+</footer>
+</main>
+
+
+ 
+ 
+ 
+ 
+<script src="assets/script/navigation__at_header.js"></script>
+</body>
+</html>

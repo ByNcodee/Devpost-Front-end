@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>< DEVPOST > - home</title>
+
+	<link rel="stylesheet" href="assets/style/main.css">
+
+</head>
+<body>
+
+<header class="navigation_main_container"> 
+	 
+    <a href="index.html"> 
+		<img src="assets/img/logo.png" class="web_logo">
+	</a>
+
+	<nav> 
+		<a class="web_nav_button" href="hackathons.html">Hackathons </a>
+		<a class="web_nav_button" href="#">Organizations </a>
+		<a class="web_nav_button" href="home.html">Home Page </a>
+		<a class="web_nav_button" href="#">Sign In </a>
+
+		<svg class="hb" onclick="toggle_navigation()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+		  <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+		    <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
+		    <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
+		  </path>
+		  <rect width="10" height="10" stroke="none">
+		    <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+		  </rect>
+		  <rect width="10" height="10" stroke="none">
+		    <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+		    <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+		  </rect>
+		</svg>
+
+	</nav>
+
+	<div id="toggled_menu_container"> 
+
+		<nav> 
+			<a class="web_toggled_menu_buttons" href="hackathons.html">Hackathons </a>
+			<a class="web_toggled_menu_buttons" href="#">Organizations </a>
+			<a class="web_toggled_menu_buttons" href="home.html">Home Page </a>
+			<a class="web_toggled_menu_buttons" href="#">Sign In </a>
+		</nav>
+
+	</div>
+
+
+</header>
+
+<section class="header_section_nav_under">
+
+	<div class="info_in_header_section"> 
+
+		<div class="info_in_header_list"> 
+
+			<label class="comming_soon_label">Coming Soon</label>
+
+ 			<div class="comment_challenge"> 
+				<h3>monday Apps Challenge 
+				Dream it, build it</h3>
+
+				<p>Build any app you can dream of and drive away in a Tesla X</p>
+ 			</div>
+
+
+ 			<div class="info_mini_box_container"> 
+
+	 			<div class="info_mini_box"> 
+	 				<span class="info_mini_box_title">Organized by</span>
+	 				<div class="info_mini_box_space_line"></div>
+	 				<span class="info_mini_box_comment"><img src="assets/img/monday.png"></span>
+	 			</div>
+
+	 			<div class="info_mini_box"> 
+	 				<span class="info_mini_box_title">Total Prize</span>
+	 				<div class="info_mini_box_space_line"></div>
+	 				<span class="info_mini_box_comment">150.000 $</span>
+	 			</div>
+
+	 			<div class="info_mini_box"> 
+	 				<span class="info_mini_box_title">Location</span>
+	 				<div class="info_mini_box_space_line"></div>
+	 				<span class="info_mini_box_comment">Online</span>
+	 			</div>
+
+	 			<div class="info_mini_box"> 
+	 				<span class="info_mini_box_title">Open To</span>
+	 				<div class="info_mini_box_space_line"></div>
+	 				<span class="info_mini_box_comment">Everyone</span>
+	 			</div>
+
+ 			</div>
+
+ 			<div class="info_buttons_box_end"> 
+ 				<a href="#" class="btn-nobg Details">Details</a>
+ 				<a href="#" class="btn-bg Apply">Apply</a>
+ 			</div>
+		</div>
+
+	</div>
+
+
+	<div class="gallery-container"> 
+
+		<div class="gallery_image_list"> 
+
+			<div class="galler_image_change_buttons"> 
+
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect width="24" height="24" rx="12" fill="#272B30" fill-opacity="0.8"/>
+				<path d="M14.0832 18.0667L8.46655 12.4667C8.39988 12.4 8.35255 12.3278 8.32455 12.25C8.29655 12.1722 8.28277 12.0889 8.28321 12C8.28321 11.9111 8.29699 11.8278 8.32455 11.75C8.3521 11.6722 8.39944 11.6 8.46655 11.5333L14.0832 5.91668C14.2388 5.76113 14.4332 5.68335 14.6665 5.68335C14.8999 5.68335 15.0999 5.76668 15.2665 5.93335C15.4332 6.10002 15.5165 6.29446 15.5165 6.51668C15.5165 6.73891 15.4332 6.93335 15.2665 7.10002L10.3665 12L15.2665 16.9C15.4221 17.0556 15.4999 17.2473 15.4999 17.4753C15.4999 17.7034 15.4165 17.9005 15.2499 18.0667C15.0832 18.2334 14.8888 18.3167 14.6665 18.3167C14.4443 18.3167 14.2499 18.2334 14.0832 18.0667Z" fill="white"/>
+				</svg>
+
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect x="24" y="24" width="24" height="24" rx="12" transform="rotate(-180 24 24)" fill="#272B30" fill-opacity="0.8"/>
+				<path d="M9.91679 5.93332L15.5335 11.5333C15.6001 11.6 15.6475 11.6722 15.6755 11.75C15.7035 11.8278 15.7172 11.9111 15.7168 12C15.7168 12.0889 15.703 12.1722 15.6755 12.25C15.6479 12.3278 15.6006 12.4 15.5335 12.4667L9.91679 18.0833C9.76123 18.2389 9.56679 18.3167 9.33345 18.3167C9.10012 18.3167 8.90012 18.2333 8.73345 18.0667C8.56679 17.9 8.48345 17.7055 8.48345 17.4833C8.48345 17.2611 8.56679 17.0667 8.73345 16.9L13.6335 12L8.73345 7.09998C8.5779 6.94443 8.50012 6.75265 8.50012 6.52465C8.50012 6.29665 8.58345 6.09954 8.75012 5.93332C8.91679 5.76665 9.11123 5.68332 9.33345 5.68332C9.55568 5.68332 9.75012 5.76665 9.91679 5.93332Z" fill="white"/>
+				</svg>
+
+			</div>
+ 
+			<img class="gallery_image_list_active" src="assets/img/tesla.jpg">
+			<img src="assets/img/ai.jpg">
+			<img src="assets/img/party.jpg">
+			<img src="assets/img/ai.jpg">
+ 
+		</div>
+
+	</div>
+</section>
+
+
+<main class="web_main_container_01"> 
+
+	<div class="spacer"></div>
+
+	<div class="web_main_container_01_content"> 
+
+		<div class="web_main_container_01_content_block"> 
+			<h1>Join hackathons and win great prizes</h1>
+
+			<p>Check out hackathons organized by large companies or government agencies</p>
+			<p>Apply for one of the competitions on different themes that suits your skills </p>
+			<p>Develop your projects and get the opportunity to win one of the great prizes</p>
+ 
+			<a class="btn-bg Explore">Explore</a>
+		</div>
+
+
+		<div class="web_main_container_01_content_block"> 
+			<img src="assets/img/awards.png">
+		</div>
+
+	</div>
+
+	<div class="spacer"> </div>
+
+	<section class="Companies_container"> 
+
+		<div class="Companies_list"> 
+			<img src="assets/img/amazon.png">
+			<img src="assets/img/g_electric.png">
+			<img src="assets/img/ibm.png">
+			<img src="assets/img/microsoft.png">
+			<img src="assets/img/oculus.png">
+			<img src="assets/img/pennapp.png">
+			<img src="assets/img/techcrunch.png">
+			<img src="assets/img/combinator.png">
+			<img src="assets/img/sxsw.png">
+		</div>
+
+	</section>
+
+	<div class="spacer"> </div>
+
+	<div class="web_main_container_01_content"> 
+
+
+		<div class="web_main_container_01_content_block"> 
+			<img src="assets/img/team.png" class="two_block_img">
+		</div>
+
+		<div class="web_main_container_01_content_block"> 
+			<h1>FIND YOUR TEAM</h1>
+
+			<p>Build your team for competitions </p>
+			<p>Match with your perfect teammates</p>
+			<p>Meet new friends and make great projects</p>
+
+			<a class="btn-bg Explore">Explore</a>
+		</div>
+
+	</div>
+
+	<div class="spacer"> </div>
+
+ 	<div class="web_main_container_01_content"> 
+
+		<div class="web_main_container_01_content_block"> 
+			<h1>Find your dream job</h1>
+
+			<p>Strengthen your profile and skills by participating in hackathons  </p>
+			<p>Show professionals that you are open to job opportunities </p>
+			<p>Get noticed by top companies for a jobs you deserve </p>
+
+			<a class="btn-bg Explore">Explore</a>
+		</div>
+
+		<div class="web_main_container_01_content_block"> 
+			<img src="assets/img/job.png" class="two_block_img">
+		</div>
+	</div>
+
+<div class="spacer"> </div>
+
+<footer class="web_footer_container"> 
+
+<div class="web_footer_content_block"> 
+	<img src="assets/img/logo.png">
+	<div class="soc_media_footer"> 
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M10.4839 15L15.6739 12L10.4839 9V15ZM22.0439 7.17C22.1739 7.64 22.2639 8.27 22.3239 9.07C22.3939 9.87 22.4239 10.56 22.4239 11.16L22.4839 12C22.4839 14.19 22.3239 15.8 22.0439 16.83C21.7939 17.73 21.2139 18.31 20.3139 18.56C19.8439 18.69 18.9839 18.78 17.6639 18.84C16.3639 18.91 15.1739 18.94 14.0739 18.94L12.4839 19C8.29389 19 5.68389 18.84 4.65389 18.56C3.75389 18.31 3.17389 17.73 2.92389 16.83C2.79389 16.36 2.70389 15.73 2.64389 14.93C2.57389 14.13 2.54389 13.44 2.54389 12.84L2.48389 12C2.48389 9.81 2.64389 8.2 2.92389 7.17C3.17389 6.27 3.75389 5.69 4.65389 5.44C5.12389 5.31 5.98389 5.22 7.30389 5.16C8.60389 5.09 9.79389 5.06 10.8939 5.06L12.4839 5C16.6739 5 19.2839 5.16 20.3139 5.44C21.2139 5.69 21.7939 6.27 22.0439 7.17Z" fill="#CED4DA"/>
+		</svg>
+	</a>
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M22.9439 6C22.1739 6.35 21.3439 6.58 20.4839 6.69C21.3639 6.16 22.0439 5.32 22.3639 4.31C21.5339 4.81 20.6139 5.16 19.6439 5.36C18.8539 4.5 17.7439 4 16.4839 4C14.1339 4 12.2139 5.92 12.2139 8.29C12.2139 8.63 12.2539 8.96 12.3239 9.27C8.76393 9.09 5.59393 7.38 3.48393 4.79C3.11393 5.42 2.90393 6.16 2.90393 6.94C2.90393 8.43 3.65393 9.75 4.81393 10.5C4.10393 10.5 3.44393 10.3 2.86393 10V10.03C2.86393 12.11 4.34393 13.85 6.30393 14.24C5.67465 14.4122 5.01402 14.4362 4.37393 14.31C4.64553 15.1625 5.17746 15.9084 5.89494 16.4429C6.61242 16.9775 7.47937 17.2737 8.37393 17.29C6.85756 18.4904 4.97792 19.1393 3.04393 19.13C2.70393 19.13 2.36393 19.11 2.02393 19.07C3.92393 20.29 6.18393 21 8.60393 21C16.4839 21 20.8139 14.46 20.8139 8.79C20.8139 8.6 20.8139 8.42 20.8039 8.23C21.6439 7.63 22.3639 6.87 22.9439 6Z" fill="#CED4DA"/>
+		</svg>
+
+	</a>
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M19.4839 3C20.0143 3 20.523 3.21071 20.8981 3.58579C21.2732 3.96086 21.4839 4.46957 21.4839 5V19C21.4839 19.5304 21.2732 20.0391 20.8981 20.4142C20.523 20.7893 20.0143 21 19.4839 21H5.48389C4.95345 21 4.44475 20.7893 4.06967 20.4142C3.6946 20.0391 3.48389 19.5304 3.48389 19V5C3.48389 4.46957 3.6946 3.96086 4.06967 3.58579C4.44475 3.21071 4.95345 3 5.48389 3H19.4839ZM18.9839 18.5V13.2C18.9839 12.3354 18.6404 11.5062 18.0291 10.8948C17.4177 10.2835 16.5885 9.94 15.7239 9.94C14.8739 9.94 13.8839 10.46 13.4039 11.24V10.13H10.6139V18.5H13.4039V13.57C13.4039 12.8 14.0239 12.17 14.7939 12.17C15.1652 12.17 15.5213 12.3175 15.7838 12.5801C16.0464 12.8426 16.1939 13.1987 16.1939 13.57V18.5H18.9839ZM7.36389 8.56C7.80945 8.56 8.23677 8.383 8.55183 8.06794C8.86689 7.75288 9.04389 7.32556 9.04389 6.88C9.04389 5.95 8.29389 5.19 7.36389 5.19C6.91567 5.19 6.48581 5.36805 6.16888 5.68499C5.85194 6.00193 5.67389 6.43178 5.67389 6.88C5.67389 7.81 6.43389 8.56 7.36389 8.56ZM8.75389 18.5V10.13H5.98389V18.5H8.75389Z" fill="#CED4DA"/>
+		</svg>
+
+	</a>
+
+	<a href="#"> 
+		<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M22.4839 12C22.4839 6.48 18.0039 2 12.4839 2C6.96389 2 2.48389 6.48 2.48389 12C2.48389 16.84 5.92389 20.87 10.4839 21.8V15H8.48389V12H10.4839V9.5C10.4839 7.57 12.0539 6 13.9839 6H16.4839V9H14.4839C13.9339 9 13.4839 9.45 13.4839 10V12H16.4839V15H13.4839V21.95C18.5339 21.45 22.4839 17.19 22.4839 12Z" fill="#CED4DA"/>
+		</svg>
+
+	</a>
+
+
+	</div>
+ 
+</div>
+
+<div class="list_navigation_at_footer"> 
+
+	<div class="list_nav_footer"> 
+		<label>COMPANY</label>
+		<a href="#">ABOUT</a>
+		<a href="#">CAREERS</a>
+		<a href="#">PRESS</a>
+		<a href="#">CONTACT</a>
+	</div>
+
+	<div class="list_nav_footer"> 
+		<label>DEVELOPERS</label>
+		<a href="#">DEVCITY</a>
+		<a href="#">LEADERBOARD</a>
+		<a href="#">TEAMS</a>
+		<a href="#">EVENTS</a>
+		<a href="#">BLOG</a>
+		<a href="#">AVAILABLE JOBS</a>
+		<a href="#">MARKETPLACE</a>
+	</div>
+
+	 
+	<div class="list_nav_footer"> 
+		<label>PROFESSIONALS</label>
+		<a href="#">HACKATHONS</a>
+		<a href="#">TALENTS</a>
+		<a href="#">MARKETING</a>
+		<a href="#">SALES</a>
+		<a href="#">LEARNING</a>
+	</div>
+
+	<div class="list_nav_footer"> 
+		<label>OTHERS</label>
+		<a href="#">Community guidelines</a>
+	 	<a href="#">SECURITY</a>
+		<a href="#">CA NOTICE</a>
+		<a href="#">PRIVACY POLICY</a>
+		<a href="#">TERMS OF SERVICE</a>
+	</div>
+	 
+</div>
+
+</footer>
+</main>
+
+
+ 
+ 
+ 
+ 
+<script src="assets/script/navigation__at_header.js"></script>
+</body>
+</html>
