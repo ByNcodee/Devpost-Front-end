@@ -1,5 +1,6 @@
 /*
 	#byncode
+	#finish 8/31/2024
 */
 @font-face {
 	font-family: roboto_web;
@@ -480,6 +481,7 @@ a.web_toggled_menu_buttons {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+    padding-top: 30px;
 }
 
 .web_hackathons_blocks {
